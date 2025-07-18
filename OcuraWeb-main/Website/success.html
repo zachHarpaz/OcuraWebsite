@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Ocura - Registration Successful</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><h1>Ocura</h1></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="mission.html">Our Mission</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#how-it-works">How It Works</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="success-section">
+        <div class="container">
+            <div class="success-content">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h1>Welcome to Ocura!</h1>
+                <p class="success-message">Thank you for joining our waitlist. You are member <strong>#<span id="waitlistCounter">...</span></strong>. You're now part of a revolutionary healthcare movement.</p>
+                <style>
+                    .success-message{margin-top:1.5rem;}
+                </style>
+                
+                <div class="next-steps">
+                    <h2>What's Next?</h2>
+                    <div class="steps-grid">
+                        <div class="step-card">
+                            <i class="fas fa-envelope"></i>
+                            <h3>Check Your Email</h3>
+                            <p>We've sent you a confirmation email with important information.</p>
+                        </div>
+                        <div class="step-card">
+                            <i class="fas fa-bell"></i>
+                            <h3>Stay Tuned</h3>
+                            <p>We'll notify you as soon as early access becomes available.</p>
+                        </div>
+                        <div class="step-card">
+                            <i class="fas fa-share-alt"></i>
+                            <h3>Spread the Word</h3>
+                            <p>Tell your friends and healthcare providers about Ocura.</p>
+                        </div>
+                        <div class="step-card">
+                            <i class="fas fa-heartbeat"></i>
+                            <h3>Get Ready</h3>
+                            <p>Explore how Ocura will transform your healthcare journey.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-share">
+                    <p>Share Ocura with your network:</p>
+                    <div class="share-buttons">
+                        <a href="#" class="share-button twitter">
+                            <i class="fab fa-twitter"></i> Share on Twitter
+                        </a>
+                        <a href="#" class="share-button linkedin">
+                            <i class="fab fa-linkedin"></i> Share on LinkedIn
+                        </a>
+                        <a href="#" class="share-button facebook">
+                            <i class="fab fa-facebook"></i> Share on Facebook
+                        </a>
+                    </div>
+                </div>
+
+                <div class="return-home">
+                    <a href="index.html" class="cta-button">Return to Homepage</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Ocura</h3>
+                    <p>Revolutionizing healthcare through intelligent data integration.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: info@ocura.health</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Ocura. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Populate waitlist counter -->
+    <script>
+      document.addEventListener('DOMContentLoaded',()=>{
+        const list=JSON.parse(localStorage.getItem('ocuraWaitlist')||'[]');
+        const counterEl=document.getElementById('waitlistCounter');
+        if(counterEl){counterEl.textContent=list.length.toString();}
+      });
+    </script>
+
+    <!-- No automatic redirect; users remain on this page -->
+</body>
+</html> 
